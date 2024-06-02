@@ -10,34 +10,13 @@
 }
 
 
-main{
+main#login{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 130vh;
     
-    #nav-login{
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 15px;
-        background-color: rgba(0, 0, 0, 0.2);
-        border-radius: 20px;
-        width: 60%;
-        padding: 1.2rem 3rem 1.2rem 3rem;
-        backdrop-filter: blur(10px);
-        
-        .options-nav-login{
-            display: flex;
-            gap: 2rem;
-
-            img{
-                cursor: pointer;
-                width: 9rem;
-            }
-        }
-          
-    }
+    
     .all-login{
         display: flex;
         width: 100%;
@@ -52,12 +31,14 @@ main{
         justify-content: center;
         padding: 7rem;
         color: #fff;
+        height: 130vh;
 
         .form-login{
             display: flex;
             flex-direction: column;
             gap: 3rem;
-            width: 60%;
+            width: 80%;
+            
             
 
             .title-form-login{
@@ -143,7 +124,7 @@ main{
     .login-left{
         background-image: url(../../assets/back-login.svg);
         width: 50%;
-        height: 100vh;
+        height: 130vh;
         background-repeat: no-repeat;
         background-size: cover;
         display: flex;
@@ -227,3 +208,44 @@ main{
   .checkbox:active ~ .slider::before {
     transform: translate(0);
   }
+
+  @media screen and (max-width: 768px) {
+    main#login{
+
+        
+    
+        .login-right{
+            padding: 0;
+            padding-top: 10rem;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+
+            .form-login{
+                width: 80%;
+            }
+        }
+}
+}
+
+  @media screen and (max-width: 574px) {
+    main#login{
+    
+    .login-left {
+        display: none;
+    }
+
+    .login-right{
+        
+        padding: 0;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        .form-login{
+            width: 80%;
+            .title-form-login{
+                text-align: center;
+            }
+        }    
+    }   }  }

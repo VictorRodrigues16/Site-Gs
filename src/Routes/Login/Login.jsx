@@ -2,19 +2,14 @@ import './Login.scss'
 import icon from '../../assets/Logo.svg'
 import sign_in from '../../assets/Sign_In.svg'
 import sign_up from '../../assets/Sign_Up.svg'
+import Nav from '../../Components/Nav/Nav'
+
 
 export default function Login(){
     return(
         <>  
-            <main className='login-page'>
-                <div id='nav-login'>
-                    <img src={icon} alt="" />
-                    <div className='options-nav-login'>
-                        <img src={sign_in} alt="" />
-                        <img src={sign_up} alt="" />
-                    </div>
-                    
-                </div>
+            <main className='login-page' id='login'>
+                <Nav/>
                 <div className='all-login'>
                     <section className='login-left'>
                         <div className='title-left-login'>
