@@ -1,8 +1,6 @@
 import './Cadastro.scss'
-import icon from '../../assets/Logo.svg'
-import sign_in from '../../assets/Sign_In.svg'
-import sign_up from '../../assets/Sign_Up.svg'
 import Nav from '../../Components/Nav/Nav'
+import { Link } from 'react-router-dom'
 
 export default function Cadastro(){
     return(
@@ -18,7 +16,7 @@ export default function Cadastro(){
                     </section>
                     
                     <section className='regis-right'>
-                            <div className="title-form-regis">
+                            <div className="title-form-regis alinhar">
                                 <h1>Bem vindo</h1>
                                 <p>Use esse abaixo formulário para seu login</p>
                             </div>
@@ -46,7 +44,7 @@ export default function Cadastro(){
                             </div>
                             <div className="button-login">
                                 <button type='submit' id='btn-login'>Registrar</button>
-                                <h4>Já possui um conta? <span>Entrar</span></h4>
+                                <h4>Já possui um conta? <Link className='link' to='/Login'>Login</Link></h4>
                             </div>
                             
                         </div>

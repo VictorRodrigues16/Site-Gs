@@ -1,8 +1,7 @@
 import './Login.scss'
-import icon from '../../assets/Logo.svg'
-import sign_in from '../../assets/Sign_In.svg'
-import sign_up from '../../assets/Sign_Up.svg'
+
 import Nav from '../../Components/Nav/Nav'
+import { Link } from 'react-router-dom'
 
 
 export default function Login(){
@@ -43,7 +42,8 @@ export default function Login(){
                             </div>
                             <div className="button-login">
                                 <button type='submit' id='btn-login'>Entrar</button>
-                                <h4>Não tem conta? <span>Registre-se</span></h4>
+                                <h4>Não tem conta? <Link className='link' to='/Cadastro'>Registre-se</Link></h4>
+                                
                             </div>
                             
                         </div>

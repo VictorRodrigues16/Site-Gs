@@ -75,7 +75,7 @@ main#cadastro{
                     border: 1px solid;
                     border-radius: 20px;
                     border-color: #14195f;
-                    cursor: pointer;
+                    cursor: text;
                 }
                  
                 #input-email, #input-senha, #input-nome{
@@ -99,9 +99,10 @@ main#cadastro{
                     font-size: 1.5rem;
                     color: #A0AEC0;
 
-                    span{
+                    .link{
                         color: #fff;
                         cursor: pointer;
+                        text-decoration: none;
                     }
                 }
 
@@ -167,11 +168,15 @@ main#cadastro{
     main#cadastro{
     
         .regis-right{
-            padding: 0;
+            padding: 3rem;
             padding-top: 10rem;
             width: 50%;
-            justify-content: center;
-            align-items: center;
+        .regis-login{
+            width: 100%;
+            h3{
+                font-size: 1.6rem;
+            }
+        }
         }
 }
 }
@@ -191,6 +196,7 @@ main#cadastro{
         width: 100%;
         justify-content: center;
         align-items: center;
+        
         .title-form-regis{
             text-align: center;
             font-size: 1.6rem;

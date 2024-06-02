@@ -70,7 +70,7 @@ main#login{
                     border: 1px solid;
                     border-radius: 20px;
                     border-color: #14195f;
-                    cursor: pointer;
+                    cursor: text;
                 }
                  
                 #input-email, #input-senha{
@@ -94,9 +94,10 @@ main#login{
                     font-size: 1.5rem;
                     color: #A0AEC0;
 
-                    span{
+                    .link{
                         color: #fff;
                         cursor: pointer;
+                        text-decoration: none;
                     }
                 }
 
@@ -212,8 +213,6 @@ main#login{
   @media screen and (max-width: 768px) {
     main#login{
 
-        
-    
         .login-right{
             padding: 0;
             padding-top: 10rem;
