@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 export default function DashBoard(){
     return(
         <>
-            <body>
+            <body id='dash-body'>
                 <aside id='nav'>
                     <div id="logo">
                         <img src={Logo} alt="Logo" />
