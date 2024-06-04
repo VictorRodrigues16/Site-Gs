@@ -59,12 +59,31 @@ main#cadastro{
             gap: 3rem;
             width: 80%;
             
-    
+            #conta{
+                font-size: 1.3rem;
+            }
 
             .inputs-regis{
                 display: flex;
                 flex-direction: column;
                 gap: 1.5rem;
+
+                #form-regis{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                }
+
+                #conta{
+                    font-size: 1.5rem;
+                    color: #A0AEC0;
+
+                    .link{
+                        color: #fff;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+                }
                 
                 input{
                     backdrop-filter: blur(50px);
@@ -95,16 +114,7 @@ main#cadastro{
                 gap: 2rem;
                 text-align: center;
 
-                h4{
-                    font-size: 1.5rem;
-                    color: #A0AEC0;
-
-                    .link{
-                        color: #fff;
-                        cursor: pointer;
-                        text-decoration: none;
-                    }
-                }
+                
 
                 #btn-login{
                     color: #fff;

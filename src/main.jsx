@@ -15,7 +15,7 @@ const router = createBrowserRouter ([
     errorElement:<Error />,
 
     children: [
-      {path: '/Login', element: <Login />},
+      {path: '/', element: <Login />},
       {path: '/Cadastro', element: <Cadastro />},
       {path: '/Dash', element: <DashBoard />},
       {path: '/Error', element: <Error />},
