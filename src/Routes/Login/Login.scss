@@ -60,6 +60,23 @@ main#login{
                 display: flex;
                 flex-direction: column;
                 gap: 1.5rem;
+
+                #form-login{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                }
+
+                #conta{
+                    font-size: 1.5rem;
+                    color: #A0AEC0;
+
+                    .link{
+                        color: #fff;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+                }
                 
                 input{
                     backdrop-filter: blur(50px);
