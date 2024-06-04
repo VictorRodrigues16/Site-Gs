@@ -67,7 +67,7 @@ export default function DashBoard(){
                             <h2>Nível do pH</h2>
                             <p>PACÍFICO</p>
 
-                            <img src={phLevel} alt="ph level" />
+                            <img id="info-img" src={phLevel} alt="ph level" />
                         </div>
 
                         <div id="info-card">
@@ -82,26 +82,26 @@ export default function DashBoard(){
                                 </div>
                             </div>
 
-                            <img src={yearsGraph} alt="years graph" />
+                            <img id="info-img" src={yearsGraph} alt="years graph" />
                         </div>
                     </div>
 
                     <div id="info">
                         <div className="info-card" id='temperature-card'>
                             <h2>TEMPERATURA ATUAL</h2>
-                            <img src={temperature} alt="icone de termometro"/>
+                            <img id="info-img" src={temperature} alt="icone de termometro"/>
                             <p>Temperatura de 26ºC</p>
                         </div>
 
                         <div className="info-card" id='luminosity-card'>
                             <h2>LUMINOSIDADE</h2>
-                            <img src={luminosity} alt="icone de termometro"/>
+                            <img id="info-img" src={luminosity} alt="icone de termometro"/>
                             <p>Luz abaixo de 4 metros</p>
                         </div>
 
                         <div className="info-card" id='ocean-card'>
                             <h2>OCEANO</h2>
-                            <img src={ocean} alt="icone de termometro"/>
+                            <img id="info-img" src={ocean} alt="icone de termometro"/>
                             <p>PACÍFICO</p>
                         </div>
                     </div>
