@@ -10,7 +10,7 @@ export default function Nav(){
         <div id='nav-login'>
             <img src={icon} alt="" />
                 <div className='options-nav-login'>
-                <Link className='link' to='/Login'><img src={sign_in} alt="" /></Link>
+                <Link className='link' to='/'><img src={sign_in} alt="" /></Link>
                 <Link className='link' to='/Cadastro'><img src={sign_up} alt="" /></Link>
                 
             </div>

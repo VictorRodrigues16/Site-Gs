@@ -1,0 +1,22 @@
+{
+  "logins": [
+    {
+      "id": "cc659f09-dc9c-442b-bee8-22370e00caff",
+      "username": "victor",
+      "email": "victorr.29@hotmail.com",
+      "password": "123"
+    },
+    {
+      "id": "ba7bddd8-3270-4aec-ba94-161ce4268465",
+      "username": "Marcelo",
+      "email": "marcelo@marcelo.com",
+      "password": "123"
+    },
+    {
+      "id": "2808cb89-c970-450e-aa89-2f287cdefe31",
+      "username": "Victor",
+      "email": "victor@aallalaa.com",
+      "password": "123"
+    }
+  ]
+}
