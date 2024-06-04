@@ -10,6 +10,9 @@ import temperature from '../../assets/temperature-icon.svg'
 import luminosity from '../../assets/luminosity-icon.svg'
 import ocean from '../../assets/ocean-icon.svg'
 import { Link } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 export default function DashBoard(){
     return(
@@ -72,19 +75,19 @@ export default function DashBoard(){
                     </div>
 
                     <div id="info">
-                        <div className="info-card">
+                        <div className="info-card" id='temperature-card'>
                             <h2>TEMPERATURA ATUAL</h2>
                             <img src={temperature} alt="icone de termometro"/>
                             <p>Temperatura de 26ºC</p>
                         </div>
 
-                        <div className="info-card">
+                        <div className="info-card" id='luminosity-card'>
                             <h2>LUMINOSIDADE</h2>
                             <img src={luminosity} alt="icone de termometro"/>
                             <p>Luz abaixo de 4 metros</p>
                         </div>
 
-                        <div className="info-card">
+                        <div className="info-card" id='ocean-card'>
                             <h2>OCEANO</h2>
                             <img src={ocean} alt="icone de termometro"/>
                             <p>PACÍFICO</p>

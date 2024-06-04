@@ -1,4 +1,4 @@
-body#dash-body {
+#dash-body {
   background-image: url(../../assets/bg-image-dash.jpg);
   display: flex;
   width: 100vw;
@@ -15,17 +15,12 @@ aside#nav {
   color: white;
   gap: 2rem;
   border-radius: 2rem;
-  margin: 1rem 1rem 1rem;
+  margin: 1rem;
 
   #line {
     width: 100%;
     height: 1px;
-    background: linear-gradient(
-      to right,
-      transparent,
-      rgba(255, 255, 255, 0.5),
-      transparent
-    );
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
   }
 
   .btns {
@@ -39,46 +34,42 @@ aside#nav {
       width: 30px;
       height: 30px;
     }
-  }
 
-  .btns a,
-  .btns button {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    padding: 10px;
-    background-color: transparent;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    gap: 1rem;
-  }
+    a,
+    button {
+      display: flex;
+      align-items: center;
+      width: 80%;
+      padding: 10px;
+      background-color: transparent;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      gap: 1rem;
 
-  .btns a:hover,
-  .btns button:hover {
-    background-color: #6464646c;
+      &:hover {
+        background-color: #6464646c;
+      }
+    }
   }
 }
 
 main#content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 2fr 4fr;
+  gap: 2rem;
   padding: 2rem;
-  gap: 1rem;
+  width: 100%;
 
   #title {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+
     h1 {
       color: white;
       font-size: 2rem;
@@ -87,74 +78,68 @@ main#content {
   }
 
   .cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 34.4rem;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
 
     #name-card {
       background-image: url(../../assets/jellyfish-bg.png);
       background-repeat: no-repeat;
-      height: 34rem;
+      background-size: cover;
       border-radius: 2rem;
-      width: 65rem;
+      padding: 3rem;
+      color: #a0aec0;
+      display: flex;
+      flex-direction: column;
 
       p {
-        display: grid;
-        padding: 3rem;
-        gap: 0.6rem;
-        color: #a0aec0;
-        font-size: 1.4rem;
-        span {
-          color: white;
-          font-size: 2.8rem;
-          font-weight: bold;
-        }
+        width: 20rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+        font-size: 1.6rem;
+      }
+
+      span {
+        color: white;
+        font-size: 2.8rem;
+        font-weight: bold;
       }
     }
 
     #ph-card {
-      background: linear-gradient(
-        148deg,
-        rgba(6, 11, 40, 0.94) 30%,
-        rgba(10, 14, 35, 0.49) 90%
-      );
+      background: linear-gradient(148deg, rgba(6, 11, 40, 0.94) 30%, rgba(10, 14, 35, 0.49) 90%);
       border-radius: 2rem;
       padding: 2rem;
-      height: 34.4rem;
+      color: #a0aec0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       h2 {
-        color: #fff;
+        color: white;
         font-size: 1.8rem;
         font-weight: bold;
       }
-      p {
-        color: #a0aec0;
-        font-size: 1.4rem;
-      }
 
       img {
-        height: 28rem;
+        height: 26rem;
       }
     }
 
     #info-card {
-      background: linear-gradient(
-        320deg,
-        rgba(6, 11, 40, 0.78) 38%,
-        rgba(10, 14, 35, 0) 100%
-      );
+      background: linear-gradient(320deg, rgba(6, 11, 40, 0.78) 38%, rgba(10, 14, 35, 0) 100%);
+      border-radius: 2rem;
+      padding: 2rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 2rem;
-      gap: 2rem;
-      border-radius: 2rem;
-      height: 100%;
+      color: #a0aec0;
+      gap: 3rem;
 
       #text {
-        width: 26rem;
+        max-width: 26rem;
         display: flex;
         flex-direction: column;
         gap: 2.4rem;
@@ -164,12 +149,8 @@ main#content {
           border-radius: 2rem;
           padding: 1rem;
 
-          p {
-            color: #a0aec0;
-            font-size: 1.4rem;
-          }
           h2 {
-            color: #fff;
+            color: white;
             font-size: 1.8rem;
             font-weight: bold;
           }
@@ -179,34 +160,213 @@ main#content {
   }
 
   #info {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 13.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: linear-gradient(180deg, #060b28 29%, #000d82 100%);
     padding: 6rem;
     border-radius: 2rem;
-    background: linear-gradient(180deg, #060b28 29%, #000d82 100%);
-    width: 100%;
+    justify-items: center;
+
 
     .info-card {
       background: linear-gradient(140deg, #2f43b0 0%, 50%, #010f50 100%);
       display: flex;
       flex-direction: column;
-      width: 37rem;
-      gap: 6rem;
-      justify-content: center;
       align-items: center;
       padding: 2rem;
       border-radius: 2rem;
+      color: #a0aec0;
+      justify-content: space-between;
+      min-width: 38rem;
 
       h2 {
         font-size: 2.4rem;
-        color: #a0aec0;
       }
 
       p {
         font-size: 3rem;
-        color: #fff;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  #dash-body{
+    flex-direction: column;
+  }
+  aside#nav {
+    gap: 1rem;
+    width: 100%;
+    margin: 0rem;
+
+    .btns a, button{
+      justify-content: center;
+    }
+  }
+
+  main#content {
+    grid-template-rows: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+    background-image: url(../../assets/bg-image-dash.jpg);
+
+    #title h1 {
+      font-size: 1.8rem;
+    }
+
+    .cards {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+      "name ph"
+      "info info";
+      gap: 2rem;
+      align-items: center;
+      justify-items: center;
+
+      #name-card, #ph-card, #info-card{
+        width: 100%;
+        height: 100%; 
+      }
+
+      #name-card{
+        grid-area: name;
+      } 
+      #ph-card{
+        grid-area: ph;
+      }
+      #info-card{
+        grid-area: info;
+        max-width: 55rem;
+      }
+
+      #name-card p {
+        font-size: 1.4rem;
+        width: 100%;
+      }
+
+      #name-card span {
+        font-size: 2.4rem;
+      }
+
+      #ph-card h2 {
+        font-size: 1.6rem;
+      }
+
+      #info-card #text #news h2 {
+        font-size: 1.6rem;
+      }
+    }
+
+    #info {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+      "temperature luminosity"
+      "ocean ocean";
+      padding: 2rem;
+      gap: 2rem;
+      margin: 0 auto;
+      width: 100%;
+
+      #temperature-card{
+        grid-area: temperature;
+      } 
+      #luminosity-card{
+        grid-area: luminosity;
+      }
+      #ocean-card{
+        grid-area: ocean;
+        max-width: 55rem;
+      }
+
+      .info-card {
+        width: 100%;
+        height: 100%; 
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  #dash-body{
+    flex-direction: column;
+  }
+  aside#nav {
+    gap: 0.5rem;
+    
+  }
+
+  main#content {
+    padding: 0.5rem;
+    gap: 0.5rem;
+
+    #title h1 {
+      font-size: 1.5rem;
+    }
+
+    .cards {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "name"
+      "ph"
+      "info";
+      gap: 2rem;
+      max-width: 38rem;
+      align-items: center;
+      margin: 0 auto;
+
+      
+
+      #name-card p {
+        font-size: 1.2rem;
+        width: 100%;
+      }
+
+      #name-card span {
+        font-size: 2rem;
+      }
+
+      #ph-card h2 {
+        font-size: 1.4rem;
+      }
+
+      #info-card #text #news h2 {
+        font-size: 1.4rem;
+      }
+    }
+
+    #info {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "temperature"
+      "luminosity"
+      "ocean";
+      padding: 2rem;
+      background: transparent;
+      gap: 2rem;
+      justify-items: center;
+
+      #ocean-card{
+        max-width: 0;
+      }
+      .info-card {
+        max-width: 38rem;
+
+        h2 {
+          font-size: 1.8rem;
+        }
+
+        p {
+          font-size: 2rem;
+        }
       }
     }
   }
