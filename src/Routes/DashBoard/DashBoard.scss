@@ -63,10 +63,6 @@ aside#nav {
   }
 }
 
-#info-img {
-  width: 70%;
-}
-
 main#content {
   display: grid;
   grid-template-rows: 1fr 2fr 4fr;
@@ -211,6 +207,7 @@ main#content {
   #dash-body {
     flex-direction: column;
   }
+
   aside#nav {
     gap: 1rem;
     width: 100%;
@@ -317,6 +314,7 @@ main#content {
   #dash-body {
     flex-direction: column;
   }
+  
   aside#nav {
     gap: 0.5rem;
   }
@@ -390,10 +388,13 @@ main#content {
 }
 
 @media (max-width: 500px) {
+  #info-img {
+    width: 100%;
+  }
+  
   main#content {
 
     .cards{
-      max-width: 20rem;
 
       #info-card{
         flex-direction: column;

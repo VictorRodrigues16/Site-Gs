@@ -17,6 +17,12 @@
       "username": "Victor",
       "email": "victor@aallalaa.com",
       "password": "123"
+    },
+    {
+      "id": "4b2bc0f1-b4e0-4c2d-a882-d8dc8dbf5871",
+      "username": "Felipe Salazar",
+      "email": "felipe@felipe.com",
+      "password": "123"
     }
   ]
 }
