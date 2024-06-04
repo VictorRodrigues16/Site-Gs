@@ -1,4 +1,5 @@
 import './DashBoard.scss'
+import { useState } from 'react';
 import Logo from '../../assets/Logo.svg'
 import homeIcon from '../../assets/home-icon.svg'
 import logout from '../../assets/logout.svg'
@@ -9,15 +10,26 @@ import yearsGraph from '../../assets/yearsGraph.png'
 import temperature from '../../assets/temperature-icon.svg'
 import luminosity from '../../assets/luminosity-icon.svg'
 import ocean from '../../assets/ocean-icon.svg'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 export default function DashBoard(){
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        // Limpar o estado do usuário ou qualquer informação de autenticação
+        setEmail('');
+        setSenha('');
+        alert('Logout bem-sucedido!');
+        navigate('/'); // Redirecionar para a página de login ou home
+    };
     return(
         <>
-            <body id='dash-body'>
+            <section id='dash-body'>
                 <aside id='nav'>
                     <div id="logo">
                         <img src={Logo} alt="Logo" />
@@ -31,7 +43,7 @@ export default function DashBoard(){
                             <p>Dashboard</p>
                         </Link>
 
-                        <button id='logout-btn'>
+                        <button onClick={handleLogout} id='logout-btn'>
                             <img src={logout} alt="Icone de foguete" />
                             <p>Logout</p>
                         </button>
@@ -94,7 +106,7 @@ export default function DashBoard(){
                         </div>
                     </div>
                 </main>
-            </body>
+            </section>
         </>
     )
 }

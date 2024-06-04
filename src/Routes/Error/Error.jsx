@@ -9,8 +9,8 @@ export default function Error() {
       <section className="format-page">
         <img src={errorImg} alt="errorMsg" />
         <h1>404 - PAGE NOT FOUND... PLEASE TRY AGAIN!</h1>
-        <Link to="/Login" className="return-btn">
-          RETURN TO HOME
+        <Link to="/" className="return-btn">
+          RETURN TO LOGIN
         </Link>
       </section>
       </>
