@@ -10,6 +10,7 @@ export default function Login() {
 
     const handleLogin = async (e) => {
         e.preventDefault();
+        localStorage.setItem('loggedInUser', email);
 
         try {
             const response = await fetch('http://localhost:3000/logins');
