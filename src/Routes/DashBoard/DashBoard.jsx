@@ -21,7 +21,6 @@ export default function DashBoard() {
   const [infos, setInfos] = useState([]);
   const navigate = useNavigate();
 
-  const messages = useMQTT(brokerUrl, topic);
 
   const handleLogout = () => {
     setEmail("");
@@ -64,7 +63,6 @@ export default function DashBoard() {
         <aside id="nav">
           <div id="logo">
             <img src={Logo} alt="Logo" />
-            <h1>{messages}</h1>
           </div>
 
           <div id="line"></div>
