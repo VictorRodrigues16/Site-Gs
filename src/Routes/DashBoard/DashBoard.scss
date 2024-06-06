@@ -136,32 +136,36 @@ main#content {
       }
     }
 
-    .carousel-slider{
+    .carousel-slider {
       width: 100%;
       height: 100%;
     }
 
-    .slider{
+    .slider {
       height: 100%;
       background: none;
       border: none;
     }
 
-    .slider-wrapper{
+    .slider-wrapper {
       height: 100%;
       border: none;
     }
 
-    .slide{
+    .slide {
       height: 100%;
       border: none;
 
-      img{
+      img {
         width: 40%;
       }
     }
 
-    #ocean-info-card{
+    .slider{
+      overflow: visible;
+    }
+
+    #ocean-info-card, #ocean-info-card-2 {
       background: linear-gradient(
         320deg,
         rgba(6, 11, 40, 0.78) 38%,
@@ -228,7 +232,7 @@ main#content {
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1000px) {
   #dash-body {
     flex-direction: column;
   }
@@ -328,8 +332,6 @@ main#content {
         p {
           font-size: 2.4rem;
         }
-
-        
       }
     }
   }
@@ -339,7 +341,7 @@ main#content {
   #dash-body {
     flex-direction: column;
   }
-  
+
   aside#nav {
     gap: 0.5rem;
   }
@@ -418,10 +420,8 @@ main#content {
   }
 
   main#content {
-
-    .cards{
-
-      #ocean-info-card{
+    .cards {
+      #ocean-info-card {
         flex-direction: column;
       }
     }

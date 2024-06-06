@@ -13,6 +13,7 @@
   "dependencies": {
     "concurrently": "^7.0.0",
     "json-server": "^1.0.0-beta.0",
+    "mqtt": "^5.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-responsive-carousel": "^3.2.23",

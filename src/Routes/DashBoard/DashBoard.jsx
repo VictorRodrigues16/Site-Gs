@@ -18,7 +18,10 @@ export default function DashBoard() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [username, setUsername] = useState("");
+  const [infos, setInfos] = useState([]);
   const navigate = useNavigate();
+
+  const messages = useMQTT(brokerUrl, topic);
 
   const handleLogout = () => {
     setEmail("");
@@ -34,6 +37,13 @@ export default function DashBoard() {
       navigate("/");
       return;
     }
+
+    fetch("http://localhost:1880/oceaninfo")
+      .then((data) => data.json())
+      .then((data) => {
+        const oceanData = data.infos[0];
+        setInfos(oceanData);
+      });
 
     fetch("http://localhost:3000/logins")
       .then((response) => response.json())
@@ -54,6 +64,7 @@ export default function DashBoard() {
         <aside id="nav">
           <div id="logo">
             <img src={Logo} alt="Logo" />
+            <h1>{messages}</h1>
           </div>
 
           <div id="line"></div>
@@ -94,7 +105,7 @@ export default function DashBoard() {
               <img src={phLevel} alt="ph level" />
             </div>
 
-            <Carousel showStatus={false} showArrows={false} showThumbs={false}>
+            <Carousel showStatus={false} showThumbs={false}>
               <div id="ocean-info-card">
                 <div id="text">
                   <div id="news">
@@ -110,8 +121,19 @@ export default function DashBoard() {
                 <img src={yearsGraph} alt="icone de termometro" />
               </div>
 
-              <div id="AAAAAAAAAAAA">
-                <h1>AAAAAAAAAAAAAAAAAAA</h1>
+              <div id="ocean-info-card">
+                <div id="text">
+                  <div id="news">
+                    <p>Plástico no mar</p>
+                    <h2>170 trilhões de partículas de plástico</h2>
+                  </div>
+                  <div id="news">
+                    <p>Plástico destinado ao mar por ano</p>
+                    <h2>3,44 milhões de toneladas</h2>
+                  </div>
+                </div>
+
+                <img src={yearsGraph} alt="icone de termometro" />
               </div>
             </Carousel>
           </div>
@@ -120,17 +142,17 @@ export default function DashBoard() {
             <div className="info-card" id="temperature-card">
               <h2>TEMPERATURA ATUAL</h2>
               <img id="info-img" src={temperature} alt="icone de termometro" />
-              <p>Temperatura de 26ºC</p>
+              <p>Temperatura de {infos.temp}</p>
             </div>
 
             <div className="info-card" id="luminosity-card">
               <h2>LUMINOSIDADE</h2>
               <img id="info-img" src={luminosity} alt="icone de termometro" />
-              <p>Luz abaixo de 4 metros</p>
+              <p>Luz abaixo de {infos.luz}</p>
             </div>
 
             <div className="info-card" id="ocean-card">
-              <h2>OCEANO</h2>
+              <h2>{infos.oceano}</h2>
               <img id="info-img" src={ocean} alt="icone de termometro" />
               <p>PACÍFICO</p>
             </div>
