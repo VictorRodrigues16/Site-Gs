@@ -128,12 +128,12 @@ export default function DashBoard() {
               <div id="ocean-info-card">
                 <div id="text">
                   <div id="news">
-                    <p>Plástico no mar</p>
-                    <h2>170 trilhões de partículas de plástico</h2>
+                    <p>Impacto na vida marinha</p>
+                    <h2>Populações de peixes diminuíram em 40%</h2>
                   </div>
                   <div id="news">
-                    <p>Plástico destinado ao mar por ano</p>
-                    <h2>3,44 milhões de toneladas</h2>
+                    <p>Áreas mortas no oceano</p>
+                    <h2>Mais de 500 zonas mortas identificadas</h2>
                   </div>
                 </div>
 
@@ -145,19 +145,19 @@ export default function DashBoard() {
           <div id="info">
             <div className="info-card" id="temperature-card">
               <h2>TEMPERATURA ATUAL</h2>
-              <img id="info-img" src={temperature} alt="icone de termometro" />
+              <img className="info-img" src={temperature} alt="icone de termometro" />
               <p>Temperatura de {temp}ºC</p>
             </div>
 
             <div className="info-card" id="luminosity-card">
               <h2>LUMINOSIDADE</h2>
-              <img id="info-img" src={luminosity} alt="icone de termometro" />
+              <img className="info-img" src={luminosity} alt="icone de termometro" />
               <p>Luz abaixo de {lum} metros</p>
             </div>
 
             <div className="info-card" id="ocean-card">
-              <h2>OCEANO</h2>
-              <img id="info-img" src={ocean} alt="icone de termometro" />
+              <h2>REGIÃO OCEÂNICA</h2>
+              <img className="info-img" src={ocean} alt="icone de termometro" />
               <p>PACÍFICO</p>
             </div>
           </div>
