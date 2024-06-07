@@ -14,6 +14,11 @@ import { Link, useNavigate } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
+import useMQTT from "./useMqtt";
+
+const brokerUrl = "wss://broker.hivemq.com:8884/mqtt";
+const topic = "fiap/oceanGuard";
+
 export default function DashBoard() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
@@ -21,6 +26,14 @@ export default function DashBoard() {
   const [infos, setInfos] = useState([]);
   const navigate = useNavigate();
 
+  //API Externa vindo do mqqt hiveMQ
+  //AS INFORMAÇÕES DE LUMINOSIDADE E TEMPERATURA SÃO DEPENDENTES DA API DE ARDUINO
+  //Se elas não aparecerem é pq o projeto em arduino está desligado, porém a ligação do projeto está funciona
+  //Teste no site: https://www.hivemq.com/demos/websocket-client/, se inscrevendo ao tópico fiap/oceanGuard e postando um json com as infos de Temperatura e Luminosidade
+
+  const messages = useMQTT(brokerUrl, topic);
+  const temp = messages.Temperatura
+  const lum = messages.Luminosidade
 
   const handleLogout = () => {
     setEmail("");
@@ -36,13 +49,6 @@ export default function DashBoard() {
       navigate("/");
       return;
     }
-
-    fetch("http://localhost:1880/oceaninfo")
-      .then((data) => data.json())
-      .then((data) => {
-        const oceanData = data.infos[0];
-        setInfos(oceanData);
-      });
 
     fetch("http://localhost:3000/logins")
       .then((response) => response.json())
@@ -140,17 +146,17 @@ export default function DashBoard() {
             <div className="info-card" id="temperature-card">
               <h2>TEMPERATURA ATUAL</h2>
               <img id="info-img" src={temperature} alt="icone de termometro" />
-              <p>Temperatura de {infos.temp}</p>
+              <p>Temperatura de {temp}ºC</p>
             </div>
 
             <div className="info-card" id="luminosity-card">
               <h2>LUMINOSIDADE</h2>
               <img id="info-img" src={luminosity} alt="icone de termometro" />
-              <p>Luz abaixo de {infos.luz}</p>
+              <p>Luz abaixo de {lum} metros</p>
             </div>
 
             <div className="info-card" id="ocean-card">
-              <h2>{infos.oceano}</h2>
+              <h2>OCEANO</h2>
               <img id="info-img" src={ocean} alt="icone de termometro" />
               <p>PACÍFICO</p>
             </div>
